@@ -180,11 +180,31 @@ class S {
     );
   }
 
-  /// `聊天`
+  /// `Chat`
   String get chat {
     return Intl.message(
-      '聊天',
+      'Chat',
       name: 'chat',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hold and speak`
+  String get chat_voice {
+    return Intl.message(
+      'Hold and speak',
+      name: 'chat_voice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancel Recording`
+  String get quxiao_push {
+    return Intl.message(
+      'Cancel Recording',
+      name: 'quxiao_push',
       desc: '',
       args: [],
     );

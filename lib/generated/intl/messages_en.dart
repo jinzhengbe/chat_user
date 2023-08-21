@@ -79,7 +79,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Are you sure you want to change the user"),
         "chaoguo":
             MessageLookupByLibrary.simpleMessage("Cannot be less than max"),
-        "chat": MessageLookupByLibrary.simpleMessage("聊天"),
+        "chat": MessageLookupByLibrary.simpleMessage("Chat"),
+        "chat_voice": MessageLookupByLibrary.simpleMessage("Hold and speak"),
         "chuhuori": MessageLookupByLibrary.simpleMessage("Ship date"),
         "chuhuori_null":
             MessageLookupByLibrary.simpleMessage("Ship date is null"),
@@ -338,6 +339,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "quhuo": MessageLookupByLibrary.simpleMessage("Add Wiatting"),
         "quhuo_beizhu": MessageLookupByLibrary.simpleMessage("Remark"),
         "quxiao": MessageLookupByLibrary.simpleMessage("Cancel"),
+        "quxiao_push": MessageLookupByLibrary.simpleMessage("Cancel Recording"),
         "reBack": MessageLookupByLibrary.simpleMessage(
             "After adding the shipping cost, \nif the stated information is not correct\nAfter going to the previous page, you can come back to the current page. "),
         "regZid": MessageLookupByLibrary.simpleMessage(

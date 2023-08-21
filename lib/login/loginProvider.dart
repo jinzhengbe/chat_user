@@ -57,14 +57,13 @@ class LoginProvider extends ChangeNotifier {
     _loadding = true;
     notifyListeners();
     var uu = mainServer +
-        'Login/user_login?phone=' +
+        'Login/login?name=' +
         _userId.trim() +
         '&password=' +
         _passWrod.trim();
 
     await dio.get(uu).then((value) async {
       var da = jsonDecode(value.data);
-
       if (da == 0 || da == '0') {
         showToastView(S().login_passwd_username_error, context, 'center');
         _loadding = false;
@@ -79,10 +78,10 @@ class LoginProvider extends ChangeNotifier {
   saveInfo(userId, da) async {
     var _uid = da[0]['id'].toString();
     SharedPreferences getuid = await SharedPreferences.getInstance();
-    await getuid.setString('zid', _uid);
+    await getuid.setString('uid', _uid);
     await getuid.setString('zname', da[0]['name']);
     await getuid.setString('uname', userId.trim());
     await getuid.setString('password', da[0]['password']);
-    await getuid.setString('quanxian', da[0]['quanxian']);
+
   }
 }

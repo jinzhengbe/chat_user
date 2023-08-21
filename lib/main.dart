@@ -7,6 +7,7 @@ import 'package:chat_user/A_Setting/model.dart';
 import 'package:logger/logger.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'A_Setting/comm/commFunction/chat/chatSet.dart';
 import 'A_Setting/comm/commFunction/log/logSave/delLog.dart';
 import 'A_Setting/comm/commFunction/user/getUnameOnly.dart';
 import 'A_Setting/cpinfo.dart';
@@ -21,10 +22,13 @@ import 'package:chat_user/pages/main/getBoxs.dart';
 void main() async {
   HttpOverrides.global = MyHttpOverrides();
   WidgetsFlutterBinding.ensureInitialized();
-
+  final chatService = ChatService();
   // 一下是 log 的初始化
+  await Hive.initFlutter();
+  await hiveBoxS();
   SharedPreferences getuid = await SharedPreferences.getInstance();
   var _uid = getuid.getString('uid');
+  print('_uid = ' + _uid.toString());
   String logFileName = '';
   var riqi = DateTime.now().toString().substring(0, 10);
 
@@ -48,8 +52,7 @@ void main() async {
         errorAndStacktrace[1].toString());
   }).sendPort);
 
-  await Hive.initFlutter();
-  await hiveBoxS();
+
   await deleteOldLogs();
   runZonedGuarded(() {
     runApp(MyApp());

@@ -67,6 +67,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "change_user": MessageLookupByLibrary.simpleMessage("确认要更改用户么"),
         "chaoguo": MessageLookupByLibrary.simpleMessage("不能超过最大值"),
         "chat": MessageLookupByLibrary.simpleMessage("聊天"),
+        "chat_voice": MessageLookupByLibrary.simpleMessage("按住说活"),
         "chuhuori": MessageLookupByLibrary.simpleMessage("出货日期"),
         "chuhuori_null": MessageLookupByLibrary.simpleMessage("出货日期为空"),
         "cn": MessageLookupByLibrary.simpleMessage("中国"),
@@ -276,6 +277,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "quhuo": MessageLookupByLibrary.simpleMessage("取货"),
         "quhuo_beizhu": MessageLookupByLibrary.simpleMessage("取货备注"),
         "quxiao": MessageLookupByLibrary.simpleMessage("取消"),
+        "quxiao_push": MessageLookupByLibrary.simpleMessage("松开取消"),
         "reBack": MessageLookupByLibrary.simpleMessage(
             "如果添加运费后，内容不能正常显示，\n请返回上一页后 重新进入"),
         "regZid": MessageLookupByLibrary.simpleMessage("请扫码二维码注册"),

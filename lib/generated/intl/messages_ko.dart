@@ -68,6 +68,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "change_user": MessageLookupByLibrary.simpleMessage("고객을 변경하시겠습니까 "),
         "chaoguo": MessageLookupByLibrary.simpleMessage("최대치 초과할 수 없음"),
         "chat": MessageLookupByLibrary.simpleMessage("聊天"),
+        "chat_voice": MessageLookupByLibrary.simpleMessage("Hold and speak"),
         "chuhuori": MessageLookupByLibrary.simpleMessage("출화 일짜"),
         "chuhuori_null": MessageLookupByLibrary.simpleMessage("출화 일짜 비어 있습니다"),
         "cn": MessageLookupByLibrary.simpleMessage("중국"),
@@ -285,6 +286,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "quhuo": MessageLookupByLibrary.simpleMessage("미송등록"),
         "quhuo_beizhu": MessageLookupByLibrary.simpleMessage("미송 유의 사항 입력"),
         "quxiao": MessageLookupByLibrary.simpleMessage("취소"),
+        "quxiao_push": MessageLookupByLibrary.simpleMessage("녹음취소"),
         "reBack": MessageLookupByLibrary.simpleMessage(
             "운송비 추가후, 기제된 내용이 맞지 않은 경우 \n이전 페이지에 돌아간후, 다시 현재페이지로. "),
         "regZid": MessageLookupByLibrary.simpleMessage("QR코드를 스캔하여 회원가입"),

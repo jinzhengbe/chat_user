@@ -3,8 +3,10 @@
     BaseProject
 
 ## 商城调用方法
+
     shangType == '1'  点击号数 返回之前页面
     shangType == '0'  进入颜色选择页面
+
 ## 安装注意
 
     flutter_downloader 控件的ios 设置要 进行一下 否则无法启动
@@ -15,7 +17,7 @@
     
     _shanglist.sort((item1, item2) => item1[tt].compareTo(item2[tt]));
 
-## 常用快捷键 
+## 常用快捷键
 
      crtl + alt + l  整理代码
      pv   创建一个provider 文件
@@ -101,6 +103,7 @@
          var _uid = box.getAt(i)!.;
       }
     }
+
 ## 获取网络图片的 bytedata
 
     var response = await Dio()  
@@ -156,6 +159,21 @@
             )
         )
     ),
+
+## 发送消息列队
+
+        final chatService = ChatService();
+      var _dd = {
+        'avatar': 'https://example.com/avatar.png',
+        'time': DateTime.now().toString().substring(0, 19),
+        'text': _inputC.text,
+        'isMe': true,
+        'pic': ''
+      };
+      _messages.add(_dd);
+      _inputC.text = '';
+      var gg = await chatService.sendMessage(_dd);
+      print(gg);
 
 # textfiled 隐藏下划线
 
@@ -259,8 +277,6 @@
      await FlutterKeychain.put(key: "lang", value: "ko");
 
      changeLang.changeLanguage('ko','');
-
-
 
 ## pdf Stryle
 
@@ -407,7 +423,6 @@
     await FlutterKeyChain.clear();
 
 # 弹窗使用方法
-
 
     selectLei(context,bb) {
     showDialog<Null>(
@@ -600,7 +615,6 @@
          Navigator.of(context)..pop()..pop()..pop();
 
 ## minio 上传
-
 
     final minio = Minio(
     endPoint: 'minio.ksoft.link',
