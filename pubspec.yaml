@@ -60,3 +60,5 @@ flutter:
   assets:
     - assets/
     - assets/images/
+flutter_intl:
+  enabled: true

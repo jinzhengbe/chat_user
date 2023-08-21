@@ -8,6 +8,7 @@ import 'package:logger/logger.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'A_Setting/comm/commFunction/log/logSave/delLog.dart';
+import 'A_Setting/comm/commFunction/user/getUnameOnly.dart';
 import 'A_Setting/cpinfo.dart';
 import 'myapp.dart';
 import 'package:hive/hive.dart';
@@ -17,21 +18,25 @@ import 'package:chat_user/pages/main/MyHttpOverrides.dart';
 import 'package:chat_user/pages/main/getBoxs.dart';
 
 
-
-
 void main() async {
   HttpOverrides.global = MyHttpOverrides();
   WidgetsFlutterBinding.ensureInitialized();
 
   // 一下是 log 的初始化
   SharedPreferences getuid = await SharedPreferences.getInstance();
-  uid = (getuid.getString('uid')==null?'':getuid.getString('uid'))!;
-  var uName = getuid.getString(uid);
+  var _uid = getuid.getString('uid');
+  String logFileName = '';
+  var riqi = DateTime.now().toString().substring(0, 10);
 
-  String logFileName = "$cp\_$uid\_$uName.log";
+  if (_uid == null) {
+    logFileName = "$cp\_$riqi.log";
+  } else {
+    var uName = await getUnameOnly(_uid);
+    logFileName = "$cp\_$_uid\_$uName\_$riqi.log";
+  }
+
+
   Logger logger = Logger(output: saveLogFile(logFileName));
-  logger.d("This is a debug message");
-
 
   FlutterError.onError = (FlutterErrorDetails details) {
     logger.e('Flutter Error: ${details.exception}', details.stack.toString());
@@ -39,9 +44,9 @@ void main() async {
 
   Isolate.current.addErrorListener(RawReceivePort((List<dynamic> pair) {
     final List<dynamic> errorAndStacktrace = pair;
-    logger.e('Isolate Error: ${errorAndStacktrace[0]}', errorAndStacktrace[1].toString());
+    logger.e('Isolate Error: ${errorAndStacktrace[0]}',
+        errorAndStacktrace[1].toString());
   }).sendPort);
-
 
   await Hive.initFlutter();
   await hiveBoxS();

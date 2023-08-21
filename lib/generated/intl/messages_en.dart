@@ -79,6 +79,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Are you sure you want to change the user"),
         "chaoguo":
             MessageLookupByLibrary.simpleMessage("Cannot be less than max"),
+        "chat": MessageLookupByLibrary.simpleMessage("聊天"),
         "chuhuori": MessageLookupByLibrary.simpleMessage("Ship date"),
         "chuhuori_null":
             MessageLookupByLibrary.simpleMessage("Ship date is null"),
@@ -151,6 +152,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "hk": MessageLookupByLibrary.simpleMessage("HongKong"),
         "home_new": MessageLookupByLibrary.simpleMessage("New"),
         "huokuan": MessageLookupByLibrary.simpleMessage("total payment"),
+        "importExcel": MessageLookupByLibrary.simpleMessage("Import Excel"),
         "inco": MessageLookupByLibrary.simpleMessage("Into account"),
         "inputBeizhu":
             MessageLookupByLibrary.simpleMessage("Please Input Remark "),

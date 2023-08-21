@@ -10,6 +10,8 @@
   "login_title": "로그인",
   "regin": "가입",
   "del": "삭제",
+  "importExcel": "엑셀 가져오기",
+  "chat": "聊天",
   "search_wuliu": "배송 조회",
   "xuhao": "순번",
   "mingmu": "항목",

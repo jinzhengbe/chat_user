@@ -170,6 +170,26 @@ class S {
     );
   }
 
+  /// `Import Excel`
+  String get importExcel {
+    return Intl.message(
+      'Import Excel',
+      name: 'importExcel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `聊天`
+  String get chat {
+    return Intl.message(
+      '聊天',
+      name: 'chat',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Delivery tracking`
   String get search_wuliu {
     return Intl.message(

@@ -11,6 +11,8 @@
   "have_name": "existing user",
   "regin": "Register",
   "old_num": "old_num",
+  "importExcel": "Import Excel",
+  "chat": "聊天",
   "search_wuliu": "Delivery tracking",
   "dian_id": "check_id",
   "fa_id": "Delivery_id",

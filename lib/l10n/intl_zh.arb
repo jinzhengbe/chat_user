@@ -10,6 +10,8 @@
   "login_title": "登录页面",
   "regin": "注册",
   "del": "删除",
+  "importExcel": "导入Excel",
+  "chat": "聊天",
   "search_wuliu": "发货 搜索",
   "xuhao": "序号",
   "liuyan": "留言",
